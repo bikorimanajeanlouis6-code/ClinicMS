@@ -1,12 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
-namespace CampusEvents.Api.Model;
+
+namespace ClinicMS.Api.Models;
 
 [Route("api/payments")]
 public class Payment
 {
     public int Id { get; set; }
-    public Consultation Consultation { get; set; }
-    public Appointment Appointment { get; set; }
-    public string Amount { get; set; }
+    public int Consultation { get; set; }
+    public int Appointment { get; set; }
+    public string Amount { get; set; } = string.Empty;
     public DateTime Date { get; set; }
 }
